@@ -50,11 +50,37 @@ def orbite(k,s):
 
 #question 5:
 def Signature(s):
-    pass    
+    m=0
+    o=[]
+    for i in range (1,len(s)+1):
+        flag=True
+        x=orbite(i,s)
+        for e in o:
+            if s[i,-1] in e :
+                flag==False
+            if flag==True:
+                m=m+1
+                o=o+[x]
+    return (-1)**(len(s)-m)
 
 #question 6:
 def Cycles(s):
-    pass
+    nb_orb=0
+    orb=[]
+    n_orb=[]
+    for el in range(1,len(s)):
+        flag=True
+        x=orbite(el,s)
+        for e in orbite :
+            if s[el-1] in e:
+                flag = False
+        if flag:
+            nb_orb+=1
+            orbite+=[x]
+    for nombre in orbite :
+        if len(nombre)>1:
+            n_orb+[nombre]
+    return new_orbite
     
 #question 7:
 def Transposition(s):
@@ -67,3 +93,5 @@ permu=EstPermutation(perm)
 print(permu)
 print(composer(a,c))
 print (Ecrire(orbite(1,lire())))
+print(Signature(a))
+print(new_orbite)
